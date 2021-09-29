@@ -1,7 +1,8 @@
 <template>
   <div class="container">
+    <div class="center-cell"></div>
     <svg xmlns="http://www.w3.org/2000/svg" class="liquid">
-      <polygon v-for="(polygon, i) in liquidPolygons" :key="i" :points="polygon.toSVGPolygonPoints(200, 200)" />
+      <polygon v-for="(polygon, i) in liquidPolygons" :key="i" :points="polygon.toSVGPolygonPoints(300, 300)" />
     </svg>
   </div>
 </template>
@@ -36,7 +37,13 @@ export default class CoffeeCut extends Vue {
   grid-row: 2 / 2;
   grid-column: 2 / 2;
   margin: auto;
+}
+
+.center-cell {
+  grid-row: 2 / 2;
+  grid-column: 2 / 2;
   width: 100%;
   height: 100%;
+  background-color: red;
 }
 </style>

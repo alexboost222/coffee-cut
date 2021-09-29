@@ -37,13 +37,13 @@ export class Cup {
             const layerPoints = [];
 
             for (const breakpoint of breakpoints) {
-                layerPoints.push(Point.fromCupBreakpoint(breakpoint));
+                layerPoints.push(Point.fromCupBreakpoint(new CupBreakpoint(0.5 + breakpoint.x / 2, breakpoint.y)));
             }
 
             const mirrorPoints = [];
 
             for (const layerPoint of [...layerPoints].reverse()) {
-                mirrorPoints.push(new Point(-layerPoint.x, layerPoint.y));
+                mirrorPoints.push(new Point(1 - layerPoint.x, layerPoint.y));
             }
 
             layerPoints.push(...mirrorPoints);
