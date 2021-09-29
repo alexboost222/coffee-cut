@@ -15,5 +15,11 @@
   "bugs": {
     "url": "https://github.com/alexboost222/coffee-cut/issues"
   },
-  "homepage": "https://github.com/alexboost222/coffee-cut#readme"
+  "homepage": "https://github.com/alexboost222/coffee-cut#readme",
+  "dependencies": {
+    "vue": "^3.2.19"
+  },
+  "devDependencies": {
+    "@vue/compiler-sfc": "^3.2.19"
+  }
 }
