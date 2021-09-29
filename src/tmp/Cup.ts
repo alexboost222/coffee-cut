@@ -16,6 +16,10 @@ export class Cup {
     private readonly _breakpoints: CupBreakpoint[] = [];
     private readonly _liquidLayers: LiquidLayer[] = [];
 
+    get layers(){
+        return this._liquidLayers;
+    }
+
     addBreakpoint = (breakpoint: CupBreakpoint) => (this._breakpoints.push(breakpoint), this);
 
     addLiquidLayer = (liquidLayer: LiquidLayer) => (this._liquidLayers.push(liquidLayer), this);
